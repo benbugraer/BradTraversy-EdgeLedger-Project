@@ -1,0 +1,433 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+p {
+  margin: 10px 0;
+}
+
+img {
+  width: 100%;
+}
+
+/* Utilities Classes */
+
+/* Text Styling */
+.text-primary {
+  color: #28a745;
+}
+
+.text-secondary {
+  color: #0284d0;
+}
+
+/* Button Styling */
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 30px;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-top-left-radius: 15px;
+}
+
+.btn:hover {
+  background-color: #f4f4f4;
+  color: #28a745;
+  border-bottom-right-radius: 15px;
+  transition: all 0.3s linear;
+}
+
+.btn-primary,
+.bg-primary {
+  background: #28a745;
+  color: #f2f2f2;
+}
+
+.btn-secondary,
+.bg-secondary {
+  background: #0284d0;
+  color: #f4f4f4;
+}
+
+.btn-dark,
+.bg-dark {
+  background: #333;
+  color: #fff;
+}
+
+.btn-dark:hover {
+  color: #333;
+  border: 2px solid #333;
+}
+
+.btn-light,
+.bg-light {
+  background: #f2f2f2;
+  color: #333;
+}
+
+.btn-outline {
+  background: #f2f2f2;
+  color: #28a745;
+}
+
+.btn-outline:hover {
+  background: #333;
+  color: #28a745;
+}
+
+.btn-blue {
+  background: #f2f2f2;
+  color: #0284d0;
+}
+
+.btn-blue:hover {
+  color: #0284d0;
+  background: #333;
+}
+
+/* Flex Items Styling */
+.flex-items {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.flex-items > div {
+  padding: 20px;
+}
+
+/* Flex Columns Styling */
+.flex-columns.flex-reverse .row {
+  flex-direction: row-reverse;
+}
+.flex-columns .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.flex-columns .column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.flex-columns .column .column-1,
+.flex-columns .column .column-2 {
+  height: 100%;
+}
+
+.flex-columns img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flex-columns .column-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 30px;
+}
+
+.flex-columns h2 {
+  font-size: 40px;
+  font-weight: 100;
+}
+
+.flex-columns h4 {
+  margin-bottom: 10px;
+}
+
+.flex-columns p {
+  margin: 20px 0;
+}
+
+/* Section Header Styling */
+.section-header {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.section-header h2 {
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+.section-padding {
+  padding: 20px 20px 40px;
+}
+
+/* Flex Grid Styling */
+.flex-grid .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.flex-grid .column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  color: #fff;
+  opacity: 0.8;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0px;
+  padding: 0 30px;
+  transition: all 0.5s linear;
+}
+
+.navbar.top {
+  background: transparent;
+}
+
+.navbar a {
+  color: #f2f2f2;
+  padding: 10px 20px;
+  margin: 0 5px;
+}
+
+.navbar a:hover {
+  border-bottom: 3px solid #fff;
+  color: #28a745;
+  border-bottom-left-radius: 15px;
+  transition: all 0.2s linear;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar .logo {
+  font-weight: 400;
+}
+
+/* Header Styling */
+
+.hero {
+  background: url(../img/home/showcase.jpg) no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
+  color: #ddd;
+}
+
+.hero .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.hero .content h1 {
+  font-size: 55px;
+}
+
+.hero .content p {
+  font-size: 23px;
+  max-width: 600px;
+  margin: 20px 0 30px;
+}
+
+.hero::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero * {
+  z-index: 100;
+}
+
+.hero.blog {
+  background: url("../img/blog/4.jpg") no-repeat center center/cover;
+  height: 30vw;
+}
+/* Icons Styling */
+
+.icons {
+  padding: 30px;
+}
+
+.icons h3 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.icons i {
+  background-color: #28a745;
+  color: #eee;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border-left: 4px solid #333;
+}
+
+.cases img:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+#team img {
+  border-radius: 10px;
+  border: 3px solid #28a745;
+}
+
+#team img:hover {
+  transform: scale(0.9);
+  transition: all 0.4s linear;
+  cursor: pointer;
+}
+
+/* Callback Form Styling */
+.callback-form {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.callback-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.callback-form .form-control {
+  margin-bottom: 15px;
+}
+
+.callback-form input {
+  width: 100%;
+  padding: 4px;
+  height: 40px;
+  border: 1px solid #f5f5f5;
+}
+
+.callback-form .btn {
+  padding: 12px 0;
+  margin-top: 20px;
+}
+
+.callback-form .btn:hover {
+  border: 2px solid #28a745;
+}
+
+.callback-form input:focus {
+  outline-color: #28a745;
+}
+/* Post Styling */
+.post {
+  padding: 50px 30px;
+}
+
+.post h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.post .meta {
+  margin-bottom: 30px;
+}
+
+/* Footer Styling */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+}
+
+.footer a {
+  color: #fff;
+  margin: 20px;
+  font-size: 40px;
+}
+
+.footer a:hover {
+  color: #28a745;
+  border-bottom: 2px solid #28a745;
+  transition: all 0.2s linear;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 5px;
+}
+
+/* Media Queries Styling */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: 120px;
+    padding: 20px;
+  }
+  .navbar a {
+    padding: 10px 10px;
+    margin: 0 3px;
+  }
+  .flex-items {
+    flex-direction: column;
+  }
+  .flex-columns .column,
+  .flex-grid .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .team img {
+    width: 70%;
+  }
+}
